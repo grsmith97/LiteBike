@@ -3,6 +3,11 @@
         "browser": true,
         "es2021": true
     },
+    "settings": {
+        "react" :  {
+            "version": "detect"
+        }
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
@@ -139,7 +144,7 @@
         "no-magic-numbers": "error",
         "no-mixed-operators": "error",
         "no-multi-assign": "error",
-        "no-multi-spaces": "error",
+        "no-multi-spaces": "off",
         "no-multi-str": "error",
         "no-multiple-empty-lines": "error",
         "no-negated-condition": "error",
