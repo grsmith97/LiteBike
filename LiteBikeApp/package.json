@@ -11,7 +11,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|my-project|expo-status-bar)/)"
+      "node_modules/(?!(react-native|expo-status-bar)/)"
     ]
   },
   "dependencies": {
