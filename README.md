@@ -8,7 +8,11 @@ Jonah Kulakofsky
 
 ## Testing
 
-To run all tests: `npm test`
+To run all tests
+
+```
+npm test
+```
 
 ### Snapshot Testing
 
@@ -16,4 +20,8 @@ When testing components, snapshots are taken of the Document Object Model during
 
 ## Linter
 
-TBD
+To run linter on all files, go to `/LiteBikeApp` directory and run command
+
+```
+npm run lint
+```
