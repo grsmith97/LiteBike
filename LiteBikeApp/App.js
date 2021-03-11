@@ -5,11 +5,13 @@ import {StyleSheet, Text, View} from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title} data-testing='hello-world'>Hello, world!</Text>
+      <Text style={styles.title} data-testing="hello-world">
+        Hello, world!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
