@@ -30,6 +30,7 @@
     "react",
     "jest"
   ],
+  "ignorePatterns": "babel.config.js",
   "rules": {
     "accessor-pairs": "error",
     "array-bracket-newline": "error",
