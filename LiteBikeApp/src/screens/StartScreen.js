@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, Button, View} from 'react-native';
 
 export default function StartScreen() {
+  const [buttonState, setButtonState] = useState(true);
+
   const handleOnPressStart = () => {
-    console.log('Start button pressed');
+    setButtonState(!buttonState);
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title} data-testing="litebike-title">
+      <Text style={styles.title} data-testing='litebike-title'>
         LiteBike
       </Text>
-      <Button title='Start' color='#1344ad' style={styles.button} onPress={handleOnPressStart}/>
+      <Button
+        title='Start'
+        data-testing='start-button'
+        color={buttonState ? '#1344ad' : '#ff0000'}
+        style={styles.button}
+        onPress={handleOnPressStart}
+      />
     </View>
   );
 }
