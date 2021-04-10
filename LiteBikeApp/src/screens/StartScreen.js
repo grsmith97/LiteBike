@@ -1,13 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, Text, Button, View} from 'react-native';
 
-export default function StartScreen() {
-  const [buttonState, setButtonState] = useState(true);
-
-  const handleOnPressStart = () => {
-    setButtonState(!buttonState);
-  };
-
+const StartScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title} data-testing='litebike-title'>
@@ -16,13 +10,13 @@ export default function StartScreen() {
       <Button
         title='Start'
         data-testing='start-button'
-        color={buttonState ? '#1344ad' : '#ff0000'}
+        color='#add8e6'
         style={styles.button}
-        onPress={handleOnPressStart}
+        onPress={() => navigation.navigate('EndScreen', {gameStateMessage: 'You Lost!!!'})}
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -38,3 +32,5 @@ const styles = StyleSheet.create({
     // backgroundColor: '#1344ad',
   }
 });
+
+export default StartScreen;
