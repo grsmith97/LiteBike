@@ -12,7 +12,7 @@ const StartScreen = ({navigation}) => {
         data-testing='start-button'
         color='#add8e6'
         style={styles.button}
-        onPress={() => navigation.navigate('EndScreen')}
+        onPress={() => navigation.navigate('EndScreen', {gameStateMessage: 'You Lost!!!'})}
       />
     </View>
   );

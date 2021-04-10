@@ -6,15 +6,15 @@ const EndScreen = ({navigation, route}) => {
 
   return (
     <View style={styles.container}>
-      <Text>
+      <Text style={styles.title} data-testing='game-state-message'>
         {gameStateMessage}
       </Text>
       <Button
         title='Try Again'
         data-testing='end-button'
-        color={'#1344ad'}
+        color={'#add8e6'}
         style={styles.button}
-        onPress={() => navigation.navigate('Start Screen')}
+        onPress={() => navigation.navigate('StartScreen')}
       />
     </View>
   );
