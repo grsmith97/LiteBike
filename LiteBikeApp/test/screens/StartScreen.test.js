@@ -2,12 +2,20 @@ import React from 'react';
 import renderer, {act} from 'react-test-renderer';
 import StartScreen from '../../src/screens/StartScreen';
 
-let component;
+let button, component, text;
 
 describe('Given StartScreen component', () => {
-  describe('When the component renders', () => {
+  describe('When the component renders with a message', () => {
+    const props = {
+      navigation: {
+        navigate: jest.fn()
+      }
+    };
+
     beforeEach(() => {
-      component = renderer.create(<StartScreen />);
+      component = renderer.create(<StartScreen {...props}/>);
+      button = component.root.findByProps({'data-testing': 'start-button'});
+      text = component.root.findByProps({'data-testing': 'litebike-title'});
     });
 
     it('Then the component matches the snapshot', () => {
@@ -15,26 +23,22 @@ describe('Given StartScreen component', () => {
     });
 
     it('Then LiteBike appears on the screen', () => {
-      const text = component.root.findByProps({'data-testing': 'litebike-title'});
       expect(text.props.children).toBe('LiteBike');
     });
 
     it('Then the start button is blue', () => {
-      const button = component.root.findByProps({'data-testing': 'start-button'});
-      expect(button.props.color).toBe('#1344ad');
+      expect(button.props.color).toBe('#add8e6');
     });
 
     describe('When the start button is clicked', () => {
-      let button;
       beforeEach(() => {
-        button = component.root.findByProps({'data-testing': 'start-button'});
         act(() => {
           button.props.onPress();
         });
       });
 
-      it('Then the start buttons color changes', () => {
-        expect(button.props.color).toBe('#ff0000');
+      it('Then navigate to the end screen', () => {
+        expect(props.navigation.navigate).toHaveBeenCalled();
       });
     });
   });

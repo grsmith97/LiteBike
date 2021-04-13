@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given StartScreen component When the component renders with a message Then the component matches the snapshot 1`] = `
+exports[`Given EndScreen component When the component renders with a message Then the component matches the snapshot 1`] = `
 <View
   style={
     Object {
@@ -11,7 +11,7 @@ exports[`Given StartScreen component When the component renders with a message T
   }
 >
   <Text
-    data-testing="litebike-title"
+    data-testing="game-state-message"
     style={
       Object {
         "color": "#1344ad",
@@ -19,7 +19,7 @@ exports[`Given StartScreen component When the component renders with a message T
       }
     }
   >
-    LiteBike
+    gameStateMessage
   </Text>
   <View
     accessibilityRole="button"
@@ -61,7 +61,7 @@ exports[`Given StartScreen component When the component renders with a message T
           ]
         }
       >
-        Start
+        Try Again
       </Text>
     </View>
   </View>
