@@ -3,7 +3,7 @@ import renderer, {act} from 'react-test-renderer';
 import EndScreen from '../../src/screens/EndScreen';
 
 let button, component, text;
-const gameStateMessage = 'gameStateMessage';
+const gameStateMessage = 'You Lost!!!';
 
 
 describe('Given EndScreen component', () => {
@@ -29,7 +29,7 @@ describe('Given EndScreen component', () => {
       expect(component.toJSON()).toMatchSnapshot();
     });
 
-    it('Then LiteBike appears on the screen', () => {
+    it(`Then ${gameStateMessage} appears on the screen`, () => {
       expect(text.props.children).toBe(gameStateMessage);
     });
 

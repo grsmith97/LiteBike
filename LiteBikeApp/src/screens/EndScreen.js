@@ -12,7 +12,7 @@ const EndScreen = ({navigation, route}) => {
       <Button
         title='Try Again'
         data-testing='end-button'
-        color={'#add8e6'}
+        color='#add8e6'
         style={styles.button}
         onPress={() => navigation.navigate('StartScreen')}
       />
