@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given MapScreen component When the component renders Then the component matches the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0,0,0,0.9)",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    data-testing="title"
+    style={
+      Object {
+        "color": "#32c8fa",
+        "fontSize": 40,
+      }
+    }
+  >
+    Level: DevMap
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "rgba(100,100,100,0.8)",
+        "borderWidth": 6,
+        "flex": 1,
+        "height": "70%",
+        "justifyContent": "center",
+        "margin": 20,
+        "maxHeight": 500,
+        "maxWidth": 800,
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      data-testing="dev-map"
+      source={
+        Object {
+          "testUri": "../../../src/assets/map-devmap.png",
+        }
+      }
+      style={
+        Object {
+          "height": "100%",
+          "resizeMode": "repeat",
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "height": 30,
+          "position": "absolute",
+          "right": 100,
+          "width": 30,
+          "zIndex": 100,
+        }
+      }
+    >
+      <Image
+        data-testing="enemy"
+        source={
+          Object {
+            "testUri": "../../../src/assets/entity-enemy.png",
+          }
+        }
+        style={
+          Object {
+            "height": "100%",
+            "resizeMode": "cover",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "height": 35,
+          "left": 100,
+          "position": "absolute",
+          "width": 35,
+          "zIndex": 101,
+        }
+      }
+    >
+      <Image
+        data-testing="player"
+        source={
+          Object {
+            "testUri": "../../../src/assets/entity-player.png",
+          }
+        }
+        style={
+          Object {
+            "height": "100%",
+            "resizeMode": "cover",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityState={Object {}}
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#32c8fa",
+            },
+          ]
+        }
+      >
+        Next
+      </Text>
+    </View>
+  </View>
+</View>
+`;

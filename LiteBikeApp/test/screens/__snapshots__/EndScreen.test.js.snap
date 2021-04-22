@@ -19,7 +19,7 @@ exports[`Given EndScreen component When the component renders with a message The
       }
     }
   >
-    gameStateMessage
+    You Lost!!!
   </Text>
   <View
     accessibilityRole="button"

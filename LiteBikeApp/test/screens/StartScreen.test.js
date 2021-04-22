@@ -37,7 +37,7 @@ describe('Given StartScreen component', () => {
         });
       });
 
-      it('Then navigate to the end screen', () => {
+      it('Then navigate to the map screen', () => {
         expect(props.navigation.navigate).toHaveBeenCalled();
       });
     });
