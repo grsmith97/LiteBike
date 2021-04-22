@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, Button, View} from 'react-native';
+import {StyleSheet, Text, Button, View, TouchableOpacity, Image} from 'react-native';
+import settings from '../assets/settings-cog.png';
 
 const StartScreen = ({navigation}) => {
   return (
@@ -11,9 +12,11 @@ const StartScreen = ({navigation}) => {
         title='Start'
         data-testing='start-button'
         color='#add8e6'
-        style={styles.button}
         onPress={() => navigation.navigate('MapScreen')}
       />
+      <TouchableOpacity disabled={true} data-testing='settings-disabled'>
+        <Image style={styles.settings} source={settings} data-testing='settings-button' />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -28,8 +31,9 @@ const styles = StyleSheet.create({
     color: '#1344ad',
     fontSize: 40,
   },
-  button: {
-    // backgroundColor: '#1344ad',
+  settings: {
+    height: 40,
+    width: 40,
   }
 });
 
